@@ -1,0 +1,21 @@
+<div class="container">
+  <div class="row">
+    @for(p of products ; track p){
+    <div class="col-4">
+      <div class="card shadow-lg m-4" style="width: 18rem;">
+        <img class="card-img-top w-50 cover-empty m-auto" [src]="p.image" alt="Card image cap">
+        <div class="card-body">
+          <h4 class="card-title  text-danger text-truncate">{{p.title}}</h4>
+          <h4 class="card-title  fs-5 text-truncate">{{p.category}}</h4>
+
+          <h5 class="card-text fs-6">{{p.price}}</h5>
+
+          <div>
+            <span>{{p.rating.rate}}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    }
+  </div>
+</div>
